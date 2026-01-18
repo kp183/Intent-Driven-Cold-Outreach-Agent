@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A production-ready AI system that generates personalized, human-sounding outreach messages through a structured 7-step reasoning workflow",
   "main": "dist/index.js",
+  "bin": {
+    "outreach-agent": "dist/server.js"
+  },
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -12,8 +15,9 @@
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --watchAll=false",
     "dev": "ts-node src/index.ts",
-    "start": "node dist/index.js",
-    "start:preprod": "NODE_ENV=preprod node dist/index.js",
+    "start": "node dist/server.js",
+    "start:preprod": "NODE_ENV=preprod node dist/server.js",
+    "start:dev": "ts-node src/server.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write src/**/*.ts",

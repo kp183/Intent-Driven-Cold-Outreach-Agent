@@ -83,12 +83,17 @@ const checks = [
     check: () => {
       try {
         execSync('npm run build', { stdio: 'pipe' });
-        return fs.existsSync('dist') && fs.existsSync('dist/index.js');
+        return fs.existsSync('dist') && fs.existsSync('dist/index.js') && fs.existsSync('dist/server.js');
       } catch {
         return false;
       }
     },
     fix: 'Fix build errors'
+  },
+  {
+    name: 'Server entry point exists',
+    check: () => fs.existsSync('dist/server.js'),
+    fix: 'Ensure server.ts compiles to dist/server.js'
   }
 ];
 
