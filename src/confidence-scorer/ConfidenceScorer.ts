@@ -195,7 +195,7 @@ export class ConfidenceScorer implements IConfidenceScorer {
    * Determines if signals meet High confidence criteria
    * High confidence: Multiple strong, recent signals with high relevance
    */
-  private meetsHighConfidenceCriteria(metrics: SignalMetrics, signals: WeightedSignal[]): boolean {
+  private meetsHighConfidenceCriteria(metrics: SignalMetrics, _signals: WeightedSignal[]): boolean {
     // Must have minimum number of signals
     if (metrics.totalSignals < this.HIGH_CONFIDENCE_MIN_SIGNALS) {
       return false;

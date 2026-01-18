@@ -192,7 +192,7 @@ export class HypothesisFormer implements IHypothesisFormer {
    */
   private isGroundedInEvidence(reason: string, signal: WeightedSignal): boolean {
     // Check if the signal description supports the reason
-    const reasonKeywords = reason.toLowerCase().split(' ');
+    const _reasonKeywords = reason.toLowerCase().split(' ');
     const signalDescription = signal.description.toLowerCase();
     
     // For job change signals, verify description mentions role/position changes

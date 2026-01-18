@@ -461,7 +461,7 @@ describe('StrategySelector Property Tests', () => {
 
             // Assert - All results should be identical (no randomness)
             const firstResult = results[0];
-            results.forEach((result, index) => {
+            results.forEach((result, _index) => {
               expect(result).toEqual(firstResult);
               
               // Verify each property is identical

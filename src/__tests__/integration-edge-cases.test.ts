@@ -320,7 +320,7 @@ describe('Integration Tests - Edge Cases and Error Recovery', () => {
       const results = await Promise.all(promises);
 
       // Assert: All should succeed
-      results.forEach((result, index) => {
+      results.forEach((result, _index) => {
         expect('code' in result).toBe(false);
         
         if (!('code' in result)) {

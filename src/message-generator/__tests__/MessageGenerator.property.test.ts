@@ -84,7 +84,7 @@ describe('MessageGenerator Property Tests', () => {
           (strategy, hypothesis, prospectData) => {
             const message = messageGenerator.generateMessage(strategy, hypothesis, prospectData);
             const lowerMessage = message.toLowerCase();
-            const lowerHypothesis = hypothesis.primaryReason.toLowerCase();
+            const _lowerHypothesis = hypothesis.primaryReason.toLowerCase();
             
             // Message should reference company name (part of relevance)
             const companyName = prospectData.companyContext.name.toLowerCase();

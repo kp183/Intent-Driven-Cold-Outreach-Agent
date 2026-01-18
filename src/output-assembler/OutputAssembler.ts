@@ -302,7 +302,7 @@ export class OutputAssembler implements IOutputAssembler {
    */
   private getAlternativeStrategies(
     originalStrategy: MessageStrategy,
-    confidence: ConfidenceLevel
+    _confidence: ConfidenceLevel
   ): [MessageStrategy, MessageStrategy] {
     const baseStrategy = originalStrategy.type;
     
