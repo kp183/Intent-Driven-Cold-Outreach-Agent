@@ -20,6 +20,9 @@ coverage/
 .env.test.local
 .env.production.local
 
+# Keep preprod config for reviewers
+!.env.preprod
+
 # IDE files
 .vscode/
 .idea/
