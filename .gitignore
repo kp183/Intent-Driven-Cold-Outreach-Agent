@@ -20,7 +20,7 @@ coverage/
 .env.test.local
 .env.production.local
 
-# Keep preprod config for reviewers
+# Keep preprod config for deployment
 !.env.preprod
 
 # IDE files

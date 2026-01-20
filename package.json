@@ -10,20 +10,15 @@
   "scripts": {
     "build": "tsc",
     "build:prod": "npm run lint && npm run test && npm run build",
+    "start": "node dist/server.js",
+    "start:dev": "ts-node src/server.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --ci --coverage --watchAll=false",
-    "dev": "ts-node src/index.ts",
-    "start": "node dist/server.js",
-    "start:preprod": "NODE_ENV=preprod node dist/server.js",
-    "start:dev": "ts-node src/server.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write src/**/*.ts",
-    "type-check": "tsc --noEmit",
-    "clean": "rimraf dist",
-    "prepublishOnly": "npm run build:prod"
+    "clean": "rimraf dist"
   },
   "keywords": [
     "ai",
